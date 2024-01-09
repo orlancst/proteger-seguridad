@@ -1,5 +1,7 @@
 ---
-
+import { Image } from "astro:assets";
+import imgLogo from "/src/assets/imgs/logo.png";
+import imgCar1 from "/src/assets/imgs/car1.jpg";
 ---
 
 <html lang="en">
@@ -27,7 +29,10 @@
       <a href="#">Publicaciones</a>
       <a href="#">Quiénes Somos</a>
       <a href="#">Proyectos</a>
-      <a href="#" class="inline-flex items-center gap-x-1"
+      <button
+        type="button"
+        id="btn_navbar_soluciones"
+        class="inline-flex items-center gap-x-1"
         ><span>Soluciones</span><svg
           class="h-5 w-5"
           viewBox="0 0 20 20"
@@ -39,81 +44,194 @@
             d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
             clip-rule="evenodd"></path>
         </svg>
-      </a>
+      </button>
     </div>
 
+    <div
+      id="main_navbar"
+      class="relative py-5 pe-10 flex items-center justify-between gap-x-4 bg-black font-montserrat text-white text-sm"
+    >
+      <div id="logo_wrapper" class="pl-8">
+        <a href="#">
+          <Image src={imgLogo} alt="Logo Proteger Seguridad" width="100" />
+        </a>
+      </div>
+      <div id="primary_menu" class="flex gap-x-6">
+        <div>
+          <a href="#" class="font-semibold"> Inicio</a>
+        </div>
+        <div>
+          <button
+            type="button"
+            id="btn_navbar_productos"
+            class="inline-flex items-center gap-x-1 font-semibold"
+            ><span>Productos</span><svg
+              class="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <a href="#" class="font-semibold"> Hogar</a>
+        </div>
+        <div>
+          <a href="#" class="font-semibold"> Negocio</a>
+        </div>
+        <div>
+          <a href="#" class="font-semibold"> Vehículos</a>
+        </div>
+        <div>
+          <a href="#" class="font-semibold"> Propiedad Horizontal</a>
+        </div>
+        <div>
+          <a href="#" class="font-semibold"> Empresas</a>
+        </div>
+        <div>
+          <a href="#" class="font-semibold"> Operaciones Logísticas</a>
+        </div>
+      </div>
+    </div>
 
-	<div id="dropdown_secondary_navbar" class="absolute left-1/2 z-10 mt-2 flex w-screen max-w-max -translate-x-1/2 px-4">
-		<div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-blue-500 text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
-		  <div class="p-4">
-			<div class="group relative flex gap-x-6 rounded-lg p-2 transition hover:bg-blue-600">
+    <div id="hero" class="h-auto">
+      <div class="bg-cover bg-center bg-blend-multiply bg-heroBackground bg-neutral-800/40">
+          <div class="h-48 flex flex-col">
 
-			  <div>
-				<a href="#" class="font-semibold text-white">
-				  Protegeme
-				  <span class="absolute inset-0"></span>
-				</a>
-			  </div>
-			</div>
-			<div class="group relative flex gap-x-6 rounded-lg p-2 transition hover:bg-blue-600">
-			  <div>
-				<a href="#" class="font-semibold text-white">
-				  Proteger Smart
-				  <span class="absolute inset-0"></span>
-				</a>
-			  </div>
-			</div>
-			<div class="group relative flex gap-x-6 rounded-lg p-2 transition hover:bg-blue-600">
-			  <div>
-				<a href="#" class="font-semibold text-white">
-				  CleanApp
-				  <span class="absolute inset-0"></span>
-				</a>
-			  </div>
-			</div>
-			<div class="group relative flex gap-x-6 rounded-lg p-2 transition hover:bg-blue-600">
-			  <div>
-				<a href="#" class="font-semibold text-white">
-				  VigiControl
-				  <span class="absolute inset-0"></span>
-				</a>
-			  </div>
-			</div>
-			<div class="group relative flex gap-x-6 rounded-lg p-2 transition hover:bg-blue-600">
-			  <div>
-				<a href="#" class="font-semibold text-white">
-				  Solución para municipios
-				  <span class="absolute inset-0"></span>
-				</a>
-			  </div>
-			</div>
-			<div class="group relative flex gap-x-6 rounded-lg p-2 transition hover:bg-blue-600">
-			  <div>
-				<a href="#" class="font-semibold text-white">
-				  Solución para colegios y universidades
-				  <span class="absolute inset-0"></span>
-				</a>
-			  </div>
-			</div>
-			<div class="group relative flex gap-x-6 rounded-lg p-2 transition hover:bg-blue-600">
-			  <div>
-				<a href="#" class="font-semibold text-white">
-				  Solución para propiedad horizontal
-				  <span class="absolute inset-0"></span>
-				</a>
-			  </div>
-			</div>
-			<div class="group relative flex gap-x-6 rounded-lg p-2 transition hover:bg-blue-600">
-			  <div>
-				<a href="#" class="font-semibold text-white">
-				  Control de contenedores marítimos
-				  <span class="absolute inset-0"></span>
-				</a>
-			  </div>
-			</div>
-		  </div>
+          </div>
+      </div>
+    </div>
 
-		</div>
-	  </div>
+    <div
+      id="dropdown_secondary_navbar"
+      class="absolute z-10 top-7 w-screen max-w-max px-4 hidden animate-fade animate-duration-[350ms]"
+    >
+      <div
+        class="w-screen max-w-xs flex-auto overflow-hidden rounded-none bg-blue-500 text-sm leading-6 shadow-lg ring-1 ring-gray-900/5"
+      >
+        <div class="p-4">
+          <div
+            class="group relative flex gap-x-6 rounded-lg p-2 transition hover:bg-blue-600"
+          >
+            <div>
+              <a href="#" class="font-semibold text-white">
+                Protegeme
+                <span class="absolute inset-0"></span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="group relative flex gap-x-6 rounded-lg p-2 transition hover:bg-blue-600"
+          >
+            <div>
+              <a href="#" class="font-semibold text-white">
+                Proteger Smart
+                <span class="absolute inset-0"></span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="group relative flex gap-x-6 rounded-lg p-2 transition hover:bg-blue-600"
+          >
+            <div>
+              <a href="#" class="font-semibold text-white">
+                CleanApp
+                <span class="absolute inset-0"></span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="group relative flex gap-x-6 rounded-lg p-2 transition hover:bg-blue-600"
+          >
+            <div>
+              <a href="#" class="font-semibold text-white">
+                VigiControl
+                <span class="absolute inset-0"></span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="group relative flex gap-x-6 rounded-lg p-2 transition hover:bg-blue-600"
+          >
+            <div>
+              <a href="#" class="font-semibold text-white">
+                Solución para municipios
+                <span class="absolute inset-0"></span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="group relative flex gap-x-6 rounded-lg p-2 transition hover:bg-blue-600"
+          >
+            <div>
+              <a href="#" class="font-semibold text-white">
+                Solución para colegios y universidades
+                <span class="absolute inset-0"></span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="group relative flex gap-x-6 rounded-lg p-2 transition hover:bg-blue-600"
+          >
+            <div>
+              <a href="#" class="font-semibold text-white">
+                Solución para propiedad horizontal
+                <span class="absolute inset-0"></span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="group relative flex gap-x-6 rounded-lg p-2 transition hover:bg-blue-600"
+          >
+            <div>
+              <a href="#" class="font-semibold text-white">
+                Control de contenedores marítimos
+                <span class="absolute inset-0"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const btnSoluciones = document.getElementById("btn_navbar_soluciones");
+      const dropdownSecondaryNav = document.getElementById(
+        "dropdown_secondary_navbar"
+      );
+
+      document.addEventListener("DOMContentLoaded", () => {
+        checkSecondaryNavbarPos();
+      });
+
+      window.addEventListener("click", function (e) {
+        if (btnSoluciones.contains(e.target as Node)) {
+          dropdownSecondaryNav.classList.toggle("flex");
+          dropdownSecondaryNav.classList.toggle("hidden");
+        } else if (
+          !dropdownSecondaryNav.contains(e.target as Node) &&
+          dropdownSecondaryNav.classList.contains("flex")
+        ) {
+          dropdownSecondaryNav.classList.toggle("flex");
+          dropdownSecondaryNav.classList.toggle("hidden");
+        }
+      });
+
+      window.addEventListener("resize", checkSecondaryNavbarPos);
+
+      function checkSecondaryNavbarPos() {
+        const btnSolucionesPos = btnSoluciones.getBoundingClientRect();
+        const posLeft =
+          btnSolucionesPos.left + window.scrollX - 230 > 0
+            ? btnSolucionesPos.left + window.scrollX - 230
+            : btnSolucionesPos.left + window.scrollX - 20;
+        dropdownSecondaryNav.style.left = `${posLeft}px`;
+      }
+    </script>
   </body>
 </html>
